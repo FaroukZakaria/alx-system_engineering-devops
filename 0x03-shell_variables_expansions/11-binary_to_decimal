@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((bconvert.sh -i 10 $BINARY))
+echo $(($ip10BINARY))
