@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((ibase=10; $BINARY))
+echo $((bconvert.sh -i 10 $BINARY))
