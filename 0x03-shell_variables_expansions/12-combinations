@@ -1,2 +1,2 @@
 #!/bin/bash
-echo {a..z}{A..Z}
+echo {a..z}{A..Z} | sort
