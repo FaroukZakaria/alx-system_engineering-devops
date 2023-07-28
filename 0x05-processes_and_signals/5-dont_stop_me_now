@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 #kill pid
-kill -9 $!
+kill -L
