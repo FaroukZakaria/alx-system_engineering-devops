@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Use ps command to fetch the list of running processes
+# shellcheck disable=SC2009
+current_user=$(whoami)
+ps -u "$current_user" -o user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command | grep bash
