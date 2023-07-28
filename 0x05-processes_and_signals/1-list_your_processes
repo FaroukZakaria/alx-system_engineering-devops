@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# ps command to fetch all info in UOF
+ps axo pid,ppid,user,%cpu,%mem,vsz,rss,tty,stat,start,time,command
