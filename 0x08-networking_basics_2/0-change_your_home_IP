@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Changing hosts
+docker run -it ubuntu bash -c 'sed -i -e "1i127.0.0.2 localhost" -e "1i8.8.8.8 facebook.com" /etc/hosts'
