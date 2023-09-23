@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Configuration to use private key and to refuse password authentication
+Host *
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
