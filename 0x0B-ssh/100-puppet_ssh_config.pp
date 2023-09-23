@@ -1,8 +1,10 @@
-file { '/home/ubuntu/.ssh/config':
-  ensure  => 'file',
-  owner   => 'ubuntu',
-  group   => 'ubuntu',
-  mode    => '0600',
-  content => "IdentityFile ~/.ssh/school\nPasswordAuthentication no\n",
-  require => File['~/.ssh/school'],
+# Configuration using puppet
+file_line { 'Turn off passwd auth':
+  line   => '    PasswordAuthentication no',
+  path   => '/etc/ssh/ssh_config',
+}
+
+file_line { 'Declare identity file':
+  line   => '    IdentityFile ~/.ssh/school',
+  path   => '/etc/ssh/ssh_config',
 }
