@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
 # Connects to user ubuntu using private key
-a = "~/.shh/school"
-b = "ubuntu"
-c = "52.86.136.79"
-ssh -i "$a" "$b@$c"
+ssh -i ~/.shh/school ubuntu@52.86.136.79
