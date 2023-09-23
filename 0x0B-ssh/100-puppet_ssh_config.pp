@@ -1,7 +1,8 @@
-include sshkeys_core
-
-ssh_config { 'default_ssh_config':
-  host           => '*',
-  identityfile   => '~/.ssh/school',
-  passwordauthentication => 'no',
+file { '/home/ubuntu/.ssh/config':
+  ensure  => 'file',
+  owner   => 'ubuntu',
+  group   => 'ubuntu',
+  mode    => '0600',
+  content => "IdentityFile ~/.ssh/school\nPasswordAuthentication no\n",
+  require => File['~/.ssh/school'],
 }
