@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# same as before but limited. kill PID of nginx too
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx status | grep -q "not running"
