@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# debugs and configures nginx
+sudo rm /etc/nginx/sites-available/default
+sudo rm /etc/nginx/sites-enabled/default
+sudo service nginx restart
