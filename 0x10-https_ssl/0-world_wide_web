@@ -1,7 +1,7 @@
 #!/bin/bash
 
 display_info() {
-  echo "The subdomain $1 is a $2 record and points to $(dig +short $1.$3)"
+	echo "The subdomain $1 is a $2 record and points to $(dig +short "$1"."$3")"
 }
 
 audit_domain() {
@@ -15,7 +15,7 @@ audit_subdomain() {
 }
 
 main() {
-  [ -z "$2" ] && audit_domain "$1" || audit_subdomain "$1" "$2"
+	([ -z "$2" ] && audit_domain "$1") || (audit_subdomain "$1" "$2")
 }
 
 # Check for required arguments
