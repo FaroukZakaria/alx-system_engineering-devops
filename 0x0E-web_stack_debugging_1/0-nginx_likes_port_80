@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # debugs and configures nginx
+apt update
+apt install -y nginx
 sudo rm /etc/nginx/sites-available/default
 sudo rm /etc/nginx/sites-enabled/default
 sudo service nginx restart
