@@ -37,7 +37,6 @@ def get_employee_info_json(employee_id):
                 )
 
 
-
 if __name__ == "__main__":
     if len(sys.argv) == 2:
         employee_id = int(sys.argv[1])
