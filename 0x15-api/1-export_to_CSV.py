@@ -15,9 +15,9 @@ def get_employee_info_csv(employee_id):
         )
     employee_tasks = response2.json()
 
-    name = employee_data["username"] #we need this
+    name = employee_data["username"]
 
-    for task in employee_tasks: #we need this
+    for task in employee_tasks:
         with open('{}.csv'.format(employee_id), 'a') as file:
             file.write("\"{}\",\"{}\",\"{}\",\"{}\"\n".format(
                 employee_id, name, task["completed"], task["title"]
