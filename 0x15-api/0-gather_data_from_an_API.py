@@ -26,7 +26,7 @@ def get_employee_info(employee_id):
         )
 
     for comp in completed:
-        print('\t' + comp['title'])
+        print('\t ' + comp['title'])
 
 
 if __name__ == "__main__":
