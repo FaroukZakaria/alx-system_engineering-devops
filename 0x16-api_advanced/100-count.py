@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ sorted count on given keywords """
-import requests
 from collections import Counter
+import requests
 
 
 def count_words(subreddit, word_list, after=None, word_counts=None):
