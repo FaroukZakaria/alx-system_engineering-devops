@@ -22,14 +22,23 @@ def count_words(subreddit, word_list, after=None, word_counts=None):
                 title = post['data']['title'].lower()
                 title_words = title.split()
                 for word in word_list:
-                    if any(title_word.startswith(word) and title_word[len(word):].isalpha() is False for title_word in title_words):
+                    if any(
+                            title_word.startswith(word) and
+                            title_word[len(word):].isalpha() is False
+                            for title_word in title_words
+                            ):
                         word_counts[word] += 1
 
             next_after = data['data']['after']
             if next_after:
-                count_words(subreddit, word_list, after=next_after, word_counts=word_counts)
+                count_words(
+                        subreddit, word_list,
+                        after=next_after, word_counts=word_counts
+                        )
             else:
-                for word, count in sorted(word_counts.items(), key=lambda x: (-x[1], x[0])):
+                for word, count in sorted(
+                        word_counts.items(), key=lambda x: (-x[1], x[0])
+                        ):
                     print(f"{word}: {count}")
         else:
             pass
