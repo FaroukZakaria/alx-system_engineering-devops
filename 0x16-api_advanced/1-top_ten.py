@@ -5,7 +5,7 @@ import requests
 
 def top_ten(subreddit):
     """ Returns the hot lists """
-    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {'User-Agent': 'CustomUserAgent'}
     response = requests.get(url, headers=headers)
 
