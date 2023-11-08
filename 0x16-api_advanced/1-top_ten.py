@@ -7,7 +7,7 @@ def top_ten(subreddit):
     """ Returns the hot lists """
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {'User-Agent': 'CustomUserAgent'}
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, allow_redirects=False, headers=headers)
 
     if response.status_code == 200:
         data = response.json()
