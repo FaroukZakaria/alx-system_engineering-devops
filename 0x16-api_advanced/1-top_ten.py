@@ -14,5 +14,7 @@ def top_ten(subreddit):
         if 'children' in data['data']:
             for post in data['data']['children'][:10]:
                 print(post['data']['title'])
+    elif response.status_code == 404:
+        print(None)
     else:
         print(None)
